@@ -15,18 +15,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  GetMaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: ColorApp.mainColor,
-        appBarTheme: const AppBarTheme(
-          systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarIconBrightness: Brightness.light,
-          )
-        )
-      ),
+    return GetMaterialApp(
+      theme: ThemeData.dark().copyWith(
+          scaffoldBackgroundColor: ColorApp.mainColor,
+          appBarTheme: const AppBarTheme(
+              systemOverlayStyle: SystemUiOverlayStyle(
+                  statusBarIconBrightness: Brightness.light))),
       home: const SplashView(),
       debugShowCheckedModeBanner: false,
     );
   }
 }
-
