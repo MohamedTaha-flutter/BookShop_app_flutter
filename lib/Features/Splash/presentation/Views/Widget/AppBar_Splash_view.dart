@@ -1,3 +1,4 @@
+import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 
 class AppbarSplashView extends StatelessWidget {
@@ -7,8 +8,8 @@ class AppbarSplashView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Image(
-          image: AssetImage("assets/images/Logo.png"),
+         const Image(
+          image: AssetImage(ImageApp.logoImage) ,
           height: 100,
           width: 100,
         ),

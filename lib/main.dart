@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  GetMaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: kPrimaryColor,
+        scaffoldBackgroundColor: ColorApp.mainColor,
         appBarTheme: const AppBarTheme(
           systemOverlayStyle: SystemUiOverlayStyle(
             statusBarIconBrightness: Brightness.light,

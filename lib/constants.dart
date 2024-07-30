@@ -1,3 +1,10 @@
 import 'package:flutter/material.dart';
 
-const kPrimaryColor = Color(0xff100B20);
+
+class ColorApp {
+ static const mainColor = Color(0xff100B20);
+}
+
+class ImageApp {
+  static const  logoImage = 'assets/images/Logo.png' ;
+}
