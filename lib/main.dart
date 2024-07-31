@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 import 'Features/Splash/presentation/Views/Splash_View.dart';
-import 'constants.dart';
+import 'core/styles/color.dart';
 
 void main() {
   runApp(const MyApp());

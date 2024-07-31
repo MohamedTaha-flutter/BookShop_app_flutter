@@ -22,3 +22,4 @@ class CustomHorizontalListViewItem extends StatelessWidget {
     );
   }
 }
+  
