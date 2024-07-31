@@ -7,20 +7,17 @@ class CustomHorizontalListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * .35,
-      child: AspectRatio(
-        aspectRatio: 2.7 / 4,
-        child: Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
-              image: const DecorationImage(
-                image: AssetImage(
-                  ImageApp.testImage,
-                ),
-                fit: BoxFit.fill,
-              )),
-        ),
+    return AspectRatio(
+      aspectRatio: 2.7 / 4,
+      child: Container(
+        decoration: BoxDecoration(color: Colors.tealAccent,
+            borderRadius: BorderRadius.circular(25),
+            image: const DecorationImage(
+              image: AssetImage(
+                ImageApp.testImage,
+              ),
+              fit: BoxFit.fill,
+            )),
       ),
     );
   }
