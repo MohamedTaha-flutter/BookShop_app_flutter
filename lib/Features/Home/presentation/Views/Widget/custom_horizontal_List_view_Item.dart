@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../constants.dart';
 
@@ -7,17 +8,23 @@ class CustomHorizontalListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 2.7 / 4,
-      child: Container(
-        decoration: BoxDecoration(color: Colors.redAccent,
-            borderRadius: BorderRadius.circular(25),
-            image: const DecorationImage(
-              image: AssetImage(
-                ImageApp.testImage,
-              ),
-              fit: BoxFit.fill,
-            )),
+    return GestureDetector(
+      onTap: ()
+      {
+        GoRouter.of(context).push('/bookDetailsView') ;
+      },
+      child: AspectRatio(
+        aspectRatio: 2.7 / 4,
+        child: Container(
+          decoration: BoxDecoration(color: Colors.redAccent,
+              borderRadius: BorderRadius.circular(25),
+              image: const DecorationImage(
+                image: AssetImage(
+                  ImageApp.testImage,
+                ),
+                fit: BoxFit.fill,
+              )),
+        ),
       ),
     );
   }
