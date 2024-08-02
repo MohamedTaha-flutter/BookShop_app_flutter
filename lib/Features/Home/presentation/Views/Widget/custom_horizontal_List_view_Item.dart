@@ -10,7 +10,7 @@ class CustomHorizontalListViewItem extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 2.7 / 4,
       child: Container(
-        decoration: BoxDecoration(color: Colors.tealAccent,
+        decoration: BoxDecoration(color: Colors.redAccent,
             borderRadius: BorderRadius.circular(25),
             image: const DecorationImage(
               image: AssetImage(
