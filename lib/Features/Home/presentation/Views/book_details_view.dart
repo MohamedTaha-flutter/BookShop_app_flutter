@@ -10,9 +10,15 @@ class BookDetailsView extends StatelessWidget {
     return  Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leading: IconButton(onPressed: (){}, icon: const Icon(Icons.close),),
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 15),
+          child: IconButton(onPressed: (){}, icon: const Icon(Icons.close),),
+        ),
         actions: [
-          IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart),),
+          Padding(
+            padding: const EdgeInsets.only(right: 15),
+            child: IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart),),
+          ),
         ],
       ),
       body: const BookDetailsViewBody(),

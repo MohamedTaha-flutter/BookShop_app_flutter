@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/Home/presentation/Views/Widget/rating_book%20item.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
@@ -65,14 +66,7 @@ class BestSellerListViewItem extends StatelessWidget {
                         style: AppFontStyles.textStyle20.copyWith(fontSize: 22),
                       ),
                       const Spacer(),
-                      const Icon(
-                        FontAwesomeIcons.solidStar,
-                        color: Color(0xffFFDD4F),
-                      ),
-                      const SizedBox(width: 5,),
-                      const Text("4.8",style: AppFontStyles.textStyle18,),
-                      const SizedBox(width: 5,),
-                      Text('(250)',style: AppFontStyles.textStyle16.copyWith(color: const Color(0xff707070)),)
+                      const RatingBookItem()
                     ],
                   )
                 ],

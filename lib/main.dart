@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: ColorApp.mainColor,
           appBarTheme: const AppBarTheme(
               systemOverlayStyle: SystemUiOverlayStyle(
-                  statusBarIconBrightness: Brightness.light))),
+                  statusBarIconBrightness: Brightness.light,
+                statusBarColor: ColorApp.mainColor
+              ))),
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
     );

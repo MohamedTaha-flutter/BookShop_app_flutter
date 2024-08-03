@@ -23,4 +23,9 @@ abstract class AppFontStyles {
     fontWeight: FontWeight.normal,
     fontSize: 18,
   );
+  static const textStyle26 = TextStyle(
+    fontWeight: FontWeight.w900,
+    fontSize: 26,
+  );
+
 }

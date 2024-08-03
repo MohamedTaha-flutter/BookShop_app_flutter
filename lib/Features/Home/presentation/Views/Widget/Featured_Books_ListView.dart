@@ -13,7 +13,7 @@ class FeaturedBooksListView extends StatelessWidget {
         child: ListView.separated(
           scrollDirection: Axis.horizontal,
           physics: const BouncingScrollPhysics(),
-          itemBuilder: (context, index) => const CustomHorizontalListViewItem(),
+          itemBuilder: (context, index) => const CustomBookImage(),
           separatorBuilder: (context, index) => const SizedBox(
             width: 5,
           ),

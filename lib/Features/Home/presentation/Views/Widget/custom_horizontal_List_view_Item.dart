@@ -3,8 +3,8 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../../constants.dart';
 
-class CustomHorizontalListViewItem extends StatelessWidget {
-  const CustomHorizontalListViewItem({super.key});
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({super.key});
 
   @override
   Widget build(BuildContext context) {
