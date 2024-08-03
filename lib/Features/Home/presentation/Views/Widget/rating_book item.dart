@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/styles/text_styel.dart';
-import '../../../../../core/widget/custom_button.dart';
-
 class RatingBookItem extends StatelessWidget {
   const RatingBookItem({super.key});
 
