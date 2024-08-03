@@ -1,8 +1,8 @@
+import 'package:bookly_app/Features/Search/presentation/views/widget/search_Result_list_view.dart';
 import 'package:bookly_app/Features/Search/presentation/views/widget/search_view_text_Field.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/styles/text_styel.dart';
-import '../../../../Home/presentation/Views/Widget/best_sellar_list_view_item.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -25,21 +25,6 @@ class SearchViewBody extends StatelessWidget {
           Expanded(child: SearchResultVerticalListView())
         ],
       ),
-    );
-  }
-}
-class SearchResultVerticalListView extends StatelessWidget {
-  const SearchResultVerticalListView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.separated(
-      physics: const BouncingScrollPhysics(),
-      itemBuilder: (context, index) => const BestSellerListViewItem(),
-      separatorBuilder: (context, index) => const SizedBox(
-        height: 20,
-      ),
-      itemCount: 15,
     );
   }
 }
