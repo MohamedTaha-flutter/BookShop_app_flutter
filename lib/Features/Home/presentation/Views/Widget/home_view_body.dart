@@ -27,9 +27,6 @@ class HomeViewBody extends StatelessWidget {
                   style: AppFontStyles.textStyle20,
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
             ],
           ),
         ),
