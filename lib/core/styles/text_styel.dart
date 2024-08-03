@@ -24,7 +24,7 @@ abstract class AppFontStyles {
     fontSize: 18,
   );
   static const textStyle26 = TextStyle(
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.w600,
     fontSize: 26,
   );
 
