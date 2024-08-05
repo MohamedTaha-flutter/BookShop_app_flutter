@@ -1,38 +1,38 @@
 import 'package:dio/dio.dart';
 
 abstract class Failure {
-  final String errorMessage;
+  final String errMessage;
 
-  Failure(this.errorMessage);
+  const Failure(this.errMessage);
 }
 
 class ServerFailure extends Failure {
-  ServerFailure(super.errorMessage);
+  ServerFailure(super.errMessage);
 
-  factory ServerFailure.fromDioError(DioException dioError) {
+  factory ServerFailure.fromDioError(DioError dioError) {
     switch (dioError.type) {
-      case DioExceptionType.connectionTimeout:
-        return ServerFailure("Connection Timeout with Api Service ");
-      case DioExceptionType.sendTimeout:
-        return ServerFailure("Send Timeout with Api Service");
-      case DioExceptionType.receiveTimeout:
-        return ServerFailure("Receive Timeout with Api Service");
-      case DioExceptionType.badCertificate:
-        return ServerFailure("Connection Timeout with Api Service");
-      case DioExceptionType.badResponse:
+      case DioErrorType.connectionError:
+        return ServerFailure('Connection timeout with ApiServer');
+
+      case DioErrorType.sendTimeout:
+        return ServerFailure('Send timeout with ApiServer');
+
+      case DioErrorType.receiveTimeout:
+        return ServerFailure('Receive timeout with ApiServer');
+
+      case DioErrorType.badResponse:
         return ServerFailure.fromResponse(
             dioError.response!.statusCode, dioError.response!.data);
-      case DioExceptionType.cancel:
-        return ServerFailure('Request to ApiServer was canceled');
-      case DioExceptionType.connectionError:
-        return ServerFailure("Connection error with Api Service");
-      case DioExceptionType.unknown:
+      case DioErrorType.cancel:
+        return ServerFailure('Request to ApiServer was canceld');
+
+      case DioErrorType.unknown:
         if (dioError.message!.contains('SocketException')) {
           return ServerFailure('No Internet Connection');
         }
         return ServerFailure('Unexpected Error, Please try again!');
       default:
-        return ServerFailure('OoPS There was an Error, Please try again');
+        return ServerFailure('Opps There was an Error, Please try again');
     }
   }
 
@@ -44,7 +44,7 @@ class ServerFailure extends Failure {
     } else if (statusCode == 500) {
       return ServerFailure('Internal Server error, Please try later');
     } else {
-      return ServerFailure('OoPS There was an Error, Please try again');
+      return ServerFailure('Opps There was an Error, Please try again');
     }
   }
 }

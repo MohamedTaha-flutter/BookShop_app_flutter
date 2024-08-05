@@ -10,7 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/styles/color.dart';
 
 void main() {
-  setup() ;
+  setup();
   runApp(const MyApp());
 }
 
@@ -23,7 +23,8 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-            create: (context) => FeaturedBooksCubit(getIt.get<HomeRepoImpl>())),
+            create: (context) => FeaturedBooksCubit(getIt.get<HomeRepoImpl>())
+              ..fetchFeaturedBooks()),
         BlocProvider(
             create: (context) => NewestBooksCubit(getIt.get<HomeRepoImpl>())),
       ],
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
             appBarTheme: const AppBarTheme(
                 systemOverlayStyle: SystemUiOverlayStyle(
                     statusBarIconBrightness: Brightness.light,
-                    statusBarColor: ColorApp.mainColor))),
+                    statusBarColor: ColorApp.mainColor))
+        ),
         routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
       ),
