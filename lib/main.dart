@@ -10,6 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/styles/color.dart';
 
 void main() {
+  setup() ;
   runApp(const MyApp());
 }
 
