@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
 
-import '../../data/models/book_model/book_model.dart';
+import '../../../data/models/book_model/book_model.dart';
+
 
 abstract class FeaturedBooksState extends Equatable {
   const FeaturedBooksState();
